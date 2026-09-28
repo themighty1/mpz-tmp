@@ -44,3 +44,8 @@ rstest = { workspace = true }
 name = "io"
 path = "benches/io.rs"
 harness = false
+
+[[bench]]
+name = "executor"
+path = "benches/executor.rs"
+harness = false
