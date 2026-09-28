@@ -193,7 +193,7 @@ fn bench_join(c: &mut Criterion) {
 fn bench_map(c: &mut Criterion) {
     let mut group = c.benchmark_group("executor/map");
 
-    for &items in &[256usize, 4096] {
+    for &items in &[4096usize, 8192] {
         group.throughput(Throughput::Elements(items as u64));
 
         let runtime = build_loaded(LocalMux);
